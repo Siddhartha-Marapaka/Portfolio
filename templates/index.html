@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siddharth's Portfolio Website</title>
+
+    <!-- Google fonts: Playfair Display + Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="container nav-container">
+        <div class="logo">Siddharth's Portfolio</div>
+
+        <div
+          class="hamburger"
+          role="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </div>
+
+        <ul id="nav-menu">
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-left">
+            <div class="one">Hi, I am Siddhartha 👋</div>
+            <div class="two">
+              I am a <span class="bold">FullStack Developer</span>
+            </div>
+            <div class="button-container">
+              <a href="/about.html" class="btn">About Me</a>
+              <a href="/contact.html" class="btn">Contact</a>
+            </div>
+          </div>
+          <div class="hero-right">
+            <img src="/images/siddu.png" alt="Portrait of Siddharth" />
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects">
+          <!-- Project 1 -->
+          <div class="project">
+            <div class="project-image">
+              <img
+                src="/images/fraud.jpeg"
+                alt="Fraud Detection project preview"
+              />
+            </div>
+            <div class="project-info">
+              <div class="text">Fraud Detection Project</div>
+              <p>
+                🏦 Fraud Detection in Banking – Machine learning project to
+                detect fraudulent transactions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project row-reverse">
+            <div class="project-image">
+              <img
+                src="/images/pexels-anush-1229356 (1).jpg"
+                alt="Gym project preview"
+              />
+            </div>
+            <div class="project-info">
+              <div class="text">Gym Website Project</div>
+              <p>
+                Gym website built with HTML, CSS, JavaScript, Node.js, and
+                Express backend.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project">
+            <div class="project-image">
+              <img
+                src="/images/th-removebg-preview.png"
+                alt="Netflix clone project preview"
+              />
+            </div>
+            <div class="project-info">
+              <div class="text">Netflix Clone</div>
+              <p>
+                🎬 Netflix Clone – Responsive web app with HTML, CSS,
+                JavaScript.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>Copyright &copy;2029 | All rights reserved</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

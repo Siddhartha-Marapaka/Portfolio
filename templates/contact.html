@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Siddharth's Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="container nav-container">
+        <div class="logo">Siddharth's Portfolio</div>
+        <div class="hamburger" role="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </div>
+        <ul id="nav-menu">
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="contact">
+        <h2>Contact Me</h2>
+        <form action="/contact" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+          <div class="contact-info1">
+            <p>Marapaka Siddhartha</p>
+            <p>+91: 9704929564</p>
+            <p>siddharthasiddhu960@gmail.com</p>
+          </div>
+          <div class="contact-info2">
+            <a href="https://www.instagram.com/siddusiddharth09" target="_blank">
+              <img src="/images/instagram-removebg-preview.png" alt="Instagram logo" />
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="/images/youtube-logo.webp" alt="YouTube logo" />
+            </a>
+            <a href="https://www.linkedin.com/in/siddhartha-marapaka-538871277" target="_blank">
+              <img src="/images/linkedin-logo.png" alt="LinkedIn logo" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("success")) {
+        alert("✅ Message sent successfully!");
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
