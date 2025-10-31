@@ -4,16 +4,21 @@ const mongoose = require("mongoose");
 const Message = require("./models/message");
 
 const app = express();
-const PORT = 3000;
+
+// ✅ Use Render's environment variable or fallback to 3000
+const PORT = process.env.PORT || 3000;
+
+// ✅ Use environment variable for MongoDB (Render provides it)
+const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/portfolioDB";
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://127.0.0.1:27017/portfolioDB", {
+  .connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 // Middleware
 app.use(express.json());
@@ -48,6 +53,4 @@ app.post("/contact", async (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () =>
-  console.log(`Server running on http://localhost:${PORT}`)
-);
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
